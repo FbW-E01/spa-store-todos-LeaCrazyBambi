@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import UserContext from '../UserContext';
 import './Login.css';
 
-function Login({ setUser }) {
-
+function Login() {
+    const { user, setUser } = useContext(UserContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
